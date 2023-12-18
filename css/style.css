@@ -1,0 +1,673 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+    --main-color: #0078FF;
+    --main-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 67px;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+ul {
+    list-style: none;
+}
+
+h2.special-title {
+    font-size: 32px;
+    padding-bottom: 12px;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.special-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 20%;
+    height: 3px;
+    background-color: var(--main-color);
+}
+
+.section-title {
+    padding-bottom: 5px;
+    text-align: center;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    background-color: var(--main-color);
+    height: 4px;
+}
+
+.section-title h2 {
+    text-transform: uppercase;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+/* ===================================header section=================================== */
+header {
+    background-image: url("../DevFolio images/hero-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.header-content {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header-content h1 {
+    font-size: 72px;
+}
+
+header .header-content p {
+    border-right: 5px solid white;
+    padding-right: 8px;
+    animation: border-opacity 1s infinite;
+}
+
+@keyframes border-opacity {
+    0%{
+        border-right: 5px solid white;
+    }
+    100%{
+        border-right: 5px solid rgba(255, 255, 255, 0.4);
+    }
+}
+
+header .header-content p span::after {
+    content: "";
+    animation: change-text 8s infinite;
+}
+
+@keyframes change-text {
+    0% {
+        content: "D";
+    }
+    3% {
+        content: "De";
+    }
+    6% {
+        content: "Dev";
+    }
+    9% {
+        content: "Deve";
+    }
+    12% {
+        content: "Devel";
+    }
+    15% {
+        content: "Develo";
+    }
+    18% {
+        content: "Develop";
+    }
+    21% {
+        content: "Develope";
+    }
+    24% {
+        content: "Developer";
+    }
+    27% {
+        content: "Developer";
+    }
+    30% {
+        content: "Developer";
+    }
+    33% {
+        content: "D";
+    }
+    36% {
+        content: "De";
+    }
+    39% {
+        content: "Des";
+    }
+    42% {
+        content: "Desi";
+    }
+    45% {
+        content: "Desig";
+    }
+    48% {
+        content: "Design";
+    }
+    51% {
+        content: "Designe";
+    }
+    54% {
+        content: "Designer";
+    }
+    57% {
+        content: "Designer";
+    }
+    60% {
+        content: "Designer";
+    }
+    62% {
+        content: "Designer";
+    }
+    65% {
+        content: "F";
+    }
+    66% {
+        content: "Fr";
+    }
+    68% {
+        content: "Fre";
+    }
+    70% {
+        content: "Free";
+    }
+    72% {
+        content: "Freel";
+    }
+    75% {
+        content: "Freela";
+    }
+    78% {
+        content: "Freelan";
+    }
+    81% {
+        content: "Freelanc";
+    }
+    84% {
+        content: "Freelance";
+    }
+    87% {
+        content: "Freelancer";
+    }
+    90% {
+        content: "Freelancer";
+    }
+    93% {
+        content: "Freelancer";
+    }
+    96% {
+        content: "Freelancer";
+    }
+    100% {
+        content: "Freelancer";
+    }
+
+}
+
+/* ===================================header section=================================== */
+
+.user-info ul li {
+    padding-bottom: 17px;
+}
+
+.user-info ul li span {
+    font-weight: bold;
+    color: #1E1E1E;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.user-skills p {
+    color: #1e1e1e;
+}
+
+.progress {
+    border-radius: 0 !important;
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+}
+
+.html {
+    width: 85%;
+}
+
+.css {
+    width: 75%;
+}
+
+.php {
+    width: 50%;
+}
+
+.js {
+    width: 90%;
+}
+
+/* ======================media query====================== */
+@media screen and (max-width: 600px) {
+    .about main {
+        width: 95% !important;
+    }
+}
+/* ====================================================== */
+
+/* ===================================services section=================================== */
+.fields {
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px 20px;
+    box-shadow: var(--main-shadow)
+}
+
+.services-content .field-icon {
+    display: flex;
+    justify-content: center;
+}
+
+.services-content .field-icon span {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+    outline: 10px solid var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+    margin-bottom: 5px;
+}
+
+.services-content .field-icon i {
+    font-size: 40px;
+}
+
+.fields:hover .field-icon span {
+    background-color: var(--main-color);
+    outline: 10px solid rgba(0, 119, 255, 0.3);
+}
+
+.fields:hover .field-icon i {
+    color: white;
+}
+
+/* ======================media query====================== */
+@media screen and (max-width: 768px) {
+    .services main {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+}
+/* ====================================================== */
+
+/* ===================================dashboard section=================================== */
+.dashboard {
+    background-image: url("../DevFolio images/counters-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: var(--main-shadow);
+    padding: 7rem 0;
+    position: relative;
+}
+
+.dashboard .layer {
+    background-color: rgba(0, 119, 255, 0.7);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.dashboard main {
+    position: relative;
+    z-index: 100;
+}
+
+.dashboard-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dashboard-item .dashboard-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 10px solid #CDE1F8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.dashboard-item .dashboard-icon i, .dashboard-item p {
+    font-size: 32px;
+}
+
+.dashboard-item p {
+    margin: 5px;
+}
+
+.dashboard-item span {
+    text-align: center;
+}
+
+/* ===================================portfolio section=================================== */
+.portfolio {
+    padding: 4rem 0;
+}
+
+.portfolio .card {
+    box-shadow: var(--main-shadow);
+}
+
+.portfolio .card .card-img {
+    overflow: hidden;
+}
+
+.card .card-img img {
+    border-radius: 0 !important;
+    transition: all 0.5s;
+}
+
+.portfolio .card:hover .card-img img {
+    transform: scale(1.2);
+}
+
+/* ===================================slider section=================================== */
+.slider {
+    background-image: url("../DevFolio images/overlay-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 8rem 0 6rem;
+    position: relative;
+}
+
+.slider .layer {
+    background-color: rgba(0, 119, 255, 0.7);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.slider main {
+    position: relative;
+    z-index: 100;
+}
+
+.carousel-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.carousel-indicators {
+    position: unset !important;
+}
+
+.carousel-indicators .active {
+    background-color: white !important;
+}
+
+.carousel-indicators button {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50% !important;
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    margin: 0 5px !important;
+}
+
+.carousel-indicators button:focus {
+    background-color: white !important;
+}
+
+.carousel-caption {
+    position: unset !important;
+}
+
+.carousel-caption h4 {
+    text-transform: uppercase;
+}
+
+/* ===================================blog section=================================== */
+.blog .card {
+    box-shadow: var(--main-shadow);
+}
+
+.blog-content .card-img {
+    position: relative;
+}
+
+.blog-content .card-img .badge {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    z-index: 100;
+    text-transform: uppercase;
+}
+
+.blog-content .card-img img {
+    border-radius: 0 !important;
+}
+
+.blog-content .card-body h5 {
+    font-size: 21px;
+}
+
+.card-footer img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.blog-content a {
+    transition: all 0.5s;
+}
+
+.blog-content a:hover {
+    color: var(--main-color) !important;
+}
+
+/* ===================================contact section=================================== */
+.contact {
+    background-image: url("../DevFolio images/overlay-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: var(--main-shadow);
+    padding: 6rem 0 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact .layer {
+    background-color: rgba(0, 119, 255, 0.7);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.contact main {
+    z-index: 1000;
+    position: relative;
+}
+
+.contact .contact-info {
+    box-shadow: var(--main-shadow);
+}
+
+.send-message form input, 
+.send-message form textarea {
+    font-size: 14px;
+    padding: 12px;
+}
+
+.send-message form textarea {
+    height: 100px;
+}
+
+.send-message form button {
+    width: 180px !important;
+    font-size: 19px;
+    background-color: var(--main-color);
+    transition: all 0.5s;
+}
+.send-message form button:hover {
+    outline: 4px solid rgba(0, 119, 255, 0.3);
+    background-color: rgba(0, 119, 255, 0.8);
+}
+
+.get-in-touch .social-icons span {
+    width: 10px;
+    height: 10px;
+    padding: 20px;
+    margin-right: 15px;
+    transition: all 0.5s;
+}
+
+.get-in-touch .social-icons span:hover {
+    color: white;
+    background-color: var(--main-color);
+    outline: 4px solid rgba(0, 119, 255, 0.4);
+}
+
+/* ======================media query====================== */
+@media screen and (max-width: 600px) {
+    .contact main {
+        width: 90% !important;
+    }
+}
+/* ====================================================== */
+
+/* ===================================footer section=================================== */
+footer {
+    background-color: #0062D3;
+}
+
+/* ===================================navbar section=================================== */
+nav {
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+}
+
+nav .navbar-nav li {
+    padding-bottom: 6px;
+}
+
+nav .navbar-nav .nav-link {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 15px 5px 6px !important;
+    margin: 0 10px;
+    color: white;
+    position: relative;
+}
+.navbar-nav .nav-link:focus {
+    color: white !important;
+}
+
+.navbar-nav .nav-link::after  {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: all 0.5s;
+}
+.navbar-nav .nav-link:hover::after {
+    width: 100% !important;
+}
+
+.navbar-nav .active-link::after {
+    width: 100%;
+}
+
+/* ===========active links=========== */
+header:target ~ nav .navbar-nav a[href="#home"]::after,
+.about:target ~ nav .navbar-nav a[href="#about"]::after,
+.services:target ~ nav .navbar-nav a[href="#services"]::after,
+.portfolio:target ~ nav .navbar-nav a[href="#work"]::after,
+.blog:target ~ nav .navbar-nav a[href="#blog"]::after,
+.contact:target ~ nav .navbar-nav a[href="#contact"]::after {
+    width: 100%;
+}
+
+.about:target ~ nav .navbar-nav a.active-link::after,
+.services:target ~ nav .navbar-nav a.active-link::after,
+.portfolio:target ~ nav .navbar-nav a.active-link::after,
+.blog:target ~ nav .navbar-nav a.active-link::after,
+.contact:target ~ nav .navbar-nav a.active-link::after {
+    width: 0;
+}
+/* ===========active links=========== */
+
+nav .navbar-nav .dropdown a i {
+    font-size: 12px;
+}
+
+.dropdown-menu {
+    width: 200px;
+}
+
+.dropdown-menu li {
+    padding: 10px 0;
+}
+
+.dropdown-menu li a {
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.5s;
+}
+.dropdown-menu li a:hover {
+    color: var(--main-color) !important;
+    background-color: transparent !important;
+}
+
+.child-dropdown:focus + ul {
+    display: block;
+}
+
+.parent-dropdown {
+    position: absolute !important;
+}
+
+.nested-dropdown {
+    position: absolute !important;
+}
+
+/* ======================media query====================== */
+@media screen and (max-width: 992px) {
+    nav .navbar-nav a::after {
+        width: 0 !important;
+        height: 0 !important;
+        display: none !important;
+    }
+
+    .Drop-Down {
+        order: -1;
+    }
+}
+/* ====================================================== */
